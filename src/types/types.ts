@@ -1,5 +1,6 @@
 export interface PatrimonioItem {
-  registro: string;
+  id:string;
+  codigo: string;
   descricao: string;
   unidade: string;
   localizacao: string;
@@ -35,4 +36,10 @@ export interface AppSettings {
   vibrationEnabled: boolean;
   flashEnabled: boolean;
   theme: "light" | "dark";
+}
+ 
+export interface ColumnMappingScreenProps {
+  csvData: any[];
+  headers: string[];
+  onMappingComplete: (mapping: Record<string, string>) => void;
 }
